@@ -5,7 +5,7 @@ metadata:
   namespace: test1
 subjects:
 - kind: User
-  name: matias # "name" is case sensitive
+  name: u-b9zrh # "name" is case sensitive
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role #this must be Role or ClusterRole
