@@ -5,5 +5,5 @@ metadata:
   name: leeyescribe
 rules:
 - apiGroups: [""]
-  resources: ["deployments", "replicasets", "pods"]
+  resources: ["*"]
   verbs: ["get", "list", "watch", "create", "update", "patch", "delete"] # You can also use ["*"]
