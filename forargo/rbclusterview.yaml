@@ -1,0 +1,20 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rb-cluster-local-view-leonel
+  namespace: fleet-local
+  ownerReferences:
+  - apiVersion: provisioning.cattle.io/v1
+    kind: Cluster
+    name: local
+    uid: 98bbbced-c41f-4502-8ebb-24014b8cff93
+  resourceVersion: "290878"
+  uid: 196edd74-187b-4569-a738-cd807f5dfaa5
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: r-cluster-local-view
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: u-p4cw4
