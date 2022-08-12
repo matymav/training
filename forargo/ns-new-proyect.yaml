@@ -2,5 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: test2
+  finalizers:
+  - controller.cattle.io/namespace-auth
   labels:
     field.cattle.io/projectId: p-hjpcq
