@@ -8,8 +8,6 @@ metadata:
     kind: Cluster
     name: local
     uid: 98bbbced-c41f-4502-8ebb-24014b8cff93
-  resourceVersion: "290878"
-  uid: 196edd74-187b-4569-a738-cd807f5dfaa5
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
