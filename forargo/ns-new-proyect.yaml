@@ -3,4 +3,5 @@ kind: Namespace
 metadata:
   name: test2 
   annotations: 
-   field.cattle.io/projectId: local:project-hjpcq
+    field.cattle.io/projectId: local:p-hjpcq
+  
