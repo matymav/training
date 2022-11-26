@@ -28,9 +28,9 @@ spec:
     protocol: TCP
     targetPort: 8081
   - name: https
-    port: 443
+    port: 8081
     protocol: TCP
-    targetPort: 443
+    targetPort: 8443
   selector:
     app: nexus-server
   sessionAffinity: None
