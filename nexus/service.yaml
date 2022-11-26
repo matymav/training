@@ -1,17 +1,41 @@
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"prometheus.io/path":"/","prometheus.io/port":"8081","prometheus.io/scrape":"true"},"labels":{"app.kubernetes.io/instance":"nexus-repo"},"name":"nexus-service","namespace":"nexus"},"spec":{"ports":[{"port":8081,"targetPort":443}],"selector":{"app":"nexus-server"},"type":"LoadBalancer"}}
+    prometheus.io/path: /
+    prometheus.io/port: "8081"
+    prometheus.io/scrape: "true"
+  creationTimestamp: "2022-11-26T16:15:09Z"
+  labels:
+    app.kubernetes.io/instance: nexus-repo
   name: nexus-service
   namespace: nexus
-  annotations:
-      prometheus.io/scrape: 'true'
-      prometheus.io/path:   /
-      prometheus.io/port:   '8081'
+  resourceVersion: "755131"
+  uid: b6ee4b1e-71cb-419b-b3aa-c85ed7c29b35
 spec:
+  clusterIP: 10.43.15.194
+  clusterIPs:
+  - 10.43.15.194
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    port: 8081
+    protocol: TCP
+    targetPort: 8081
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 443
   selector:
     app: nexus-server
-  type: LoadBalancer
-  ports:
-    - port: 8081
-      targetPort: 443
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
+
       
