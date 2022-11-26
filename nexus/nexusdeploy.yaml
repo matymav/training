@@ -26,8 +26,10 @@
               ports:
                 - containerPort: 8081
               volumeMounts:
-                - name: nexus-data
+                - name: nexus-data-volume
                   mountPath: /nexus-data
           volumes:
-            - name: nexus-data
-              emptyDir: {}
+            - name: nexus-data-volume
+              persistentVolumeClaim:
+                claimName: nexus-pvc
+              
