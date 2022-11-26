@@ -28,7 +28,7 @@ spec:
   - name: https
     port: 443
     protocol: TCP
-    targetPort: 8443
+    targetPort: 443
   selector:
     app: nexus-server
   sessionAffinity: None
